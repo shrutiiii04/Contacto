@@ -1,0 +1,34 @@
+<% layout("/layouts/boilerplate") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Contacts</title>
+    <link rel="stylesheet" href="/css/allContacts.css"> <!-- Link to your custom CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h2 class="heading">ALL CONTACTS</h2>
+        <div class="contacts-grid">
+            <% contacts.forEach(contact => { %>
+            <div class="contact-card">
+                <div class="contact-info">
+                    <p class="contact-name"><%= contact.name %></p>
+                    <p class="contact-phone"><%= contact.phone %></p>
+                    <p class="contact-email"><%= contact.email %></p>
+                </div>
+                <div class="contact-actions">
+                    <form action="/api/contacts/<%= contact.id %>/edit" method="get">
+                        <button class="btn btn-danger">Edit</button>
+                    </form>
+                    <form action="/api/contacts/<%= contact.id %>?_method=DELETE" method="post">
+                        <button class="btn btn-dark">Delete</button>
+                    </form>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+</html>

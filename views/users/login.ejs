@@ -1,0 +1,26 @@
+<% layout("/layouts/boilerplate") %>
+<head>
+    <link rel="stylesheet" href="/css/signup.css"> 
+</head>
+<body>
+    <div class="container mt-3 pt-5">
+      <div class="box">
+          <h1 style="color: #656262; font-family:Arial, Helvetica, sans-serif">Login to EliteNights</h1>
+          <form action="/login" method="post" novalidate class="needs-validation">
+            <div class="input-container">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" name="username" required placeholder="Enter Username">
+              <div class="invalid-feedback">Please enter valid username</div>
+          </div>
+          <div class="input-container">
+              <i class="fas fa-lock"></i>
+              <input type="text" name="password" required placeholder="Enter password">
+              <div class="invalid-feedback">Please enter valid password</div>
+          </div>
+               <button type="submit" class="btn">Login</button>
+         </form>
+      </div>
+    </div>
+ 
+</body>
+</html>

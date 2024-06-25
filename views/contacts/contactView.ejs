@@ -1,0 +1,24 @@
+<% layout("/layouts/boilerplate") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/viewContacts.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Contact Details</title>
+</head>
+<body>
+    <div class="container">
+        <h2>View Contact Details</h2>
+        <% if (contacts.length > 0) { %>
+            <% contacts.forEach(contact => { %>
+                <div class="contact-card">
+                    <p><strong>Name:</strong> <%= contact.name %></p>
+                    <p><strong>Phone:</strong> <%= contact.phone %></p>
+                    <p><strong>Email:</strong> <%= contact.email %></p>
+                </div>
+            <% }) %>
+        <% } %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<% layout("/layouts/boilerplate") %>
+<head>
+    <link rel="stylesheet" href="/css/signup.css"> 
+</head>
+<body>
+    <div class="container mt-3 pt-5">
+      <div class="box">
+          <h1 style="color: #656262; font-family:Arial, Helvetica, sans-serif">Create Account</h1>
+          <form action="/signup" method="post" novalidate class="needs-validation">
+            <div class="input-container">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" name="username" required placeholder="Enter Username">
+              <div class="invalid-feedback">Please enter username</div>
+          </div>
+        
+          <div class="input-container">
+              <i class="fas fa-lock"></i>
+              <input type="text" name="password" required placeholder="Enter password">
+              <div class="invalid-feedback">Please enter password</div>
+          </div>
+               <button type="submit" class="btn">Sign up</button>
+               <p>By clicking of Sign Up button, you agree our <span style="color: #0cb185;">Teams & Conditions</span>  and <span style="color: #0cb185;">Privacy Policy</span> .</p>
+          </form>
+      </div>
+    </div>
+</body>
+</html>

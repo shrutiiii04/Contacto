@@ -1,0 +1,29 @@
+<% layout("/layouts/boilerplate") %>
+<head>
+    <link rel="stylesheet" href="/css/newcontact.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="heading">Create New Contact</h2>
+        <div class="edit-container">
+            <form action="/api/contacts/new" method="post" novalidate class="needs-validation">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter contact name" class="form-control" required>
+                    <div class="invalid-feedback">Name is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" pattern="\d{10}" name="phone" placeholder="Enter 10-digit phone number" class="form-control" required>
+                    <div class="invalid-feedback">Valid 10-digit phone number is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@gmail\.com$" placeholder="Enter email" class="form-control">
+                </div>
+                <button class="btn btn-success edit-btn" type="submit">SAVE</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
