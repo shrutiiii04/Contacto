@@ -37,7 +37,7 @@ async function main() {
   await mongoose.connect(url);
 }
 const store = MongoStore.create({
-  mongoUrl:process.env.ATLASDB_URL,
+  mongoUrl:url,
   crypto:{
       secret: process.env.SECRET,
   },
